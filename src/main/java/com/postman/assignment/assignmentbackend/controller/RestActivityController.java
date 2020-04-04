@@ -1,6 +1,6 @@
 package com.postman.assignment.assignmentbackend.controller;
 
-import com.postman.assignment.assignmentbackend.service.activity.ActivityService;
+import com.postman.assignment.assignmentbackend.tests.service.activity.ActivityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RestActivityController {
 
     @GetMapping("/users")
     public List<String> getUsers() {
-        LOG.error("Get Method for users is called");
+        LOG.info("Get Method for users is called");
         return activityService.getUsers();
     }
 
